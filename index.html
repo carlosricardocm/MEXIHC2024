@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taller de Creación de Mini Robots con Tinkercad</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            background-color: #0073e6;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+        }
+        nav {
+            text-align: center;
+            margin: 20px 0;
+        }
+        nav button {
+            background-color: #0073e6;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 0 5px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        nav button:hover {
+            background-color: #005bb5;
+        }
+        section {
+            margin: 20px 0;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        section h2 {
+            margin-top: 0;
+            color: #0073e6;
+        }
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #0073e6;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Taller de Creación de Mini Robots con Tinkercad</h1>
+        </div>
+    </header>
+    <nav>
+        <button onclick="setLanguage('es')">Español</button>
+        <button onclick="setLanguage('en')">English</button>
+    </nav>
+    <div class="container" id="content">
+        <section id="descripcion">
+            <h2></h2>
+            <p></p>
+        </section>
+        <section id="objetivo">
+            <h2></h2>
+            <ul>
+              
+            </ul>
+        </section>
+        <section id="temas">
+            <h2></h2>
+            <ol>
+                
+            </ol>
+        </section>
+        <section id="duracion">
+            <h2></h2>
+            <p></p>
+        </section>
+        <section id="publico">
+            <h2></h2>
+            <p></p>
+        </section>
+        <section id="requisitos">
+            <h2></h2>
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </section>
+        <section id="material">
+            <h2></h2>
+            <p></p>
+        </section>
+        <section id="organizadores">
+            <h2></h2>
+            <p><strong></strong><br>
+           
+            
+            <p><strong></strong><br>
+          
+            
+            <p><strong></strong><br>
+           
+        </section>
+        <section id="informes">
+            <h2></h2>
+            <p><strong></strong><br>           
+           
+        </section>
+    </div>
+    <footer class="footer">
+        <p></p>
+    </footer>
+    <script>
+        const content = {
+            es: {
+                descripcion: `En el marco de la Décima Conferencia Internacional Mexicana sobre Interacción Humano-Computadora MexIHC 2024 (Saltillo, Coahuila, México, 6, 7 y 8 de noviembre), te invitamos a participar al taller titulado <em>"Creación de un Mini Robot con Tinkercad"</em>. Este taller práctico está diseñado para proporcionar a los participantes una experiencia integral en el diseño, prototipado y programación de un mini robot utilizando la herramienta Tinkercad.`,
+                objetivo: `
+                    <ul>
+                        <li><em>Manejo de Tinkercad</em>: Familiarízate con las funciones básicas y aprende a diseñar y modelar piezas en 3D.</li>
+                        <li><em>Diseño del Robot</em>: Diseña las piezas del mini robot, incluyendo su estructura y componentes móviles, como servo motores y sensores.</li>
+                        <li><em>Montaje del Robot</em>: Ensambla las piezas diseñadas en 3D utilizando la técnica de impresión FFF (Fabricación con Filamento Fundido) y construye tu propio robot.</li>
+                        <li><em>Programación</em>: Introducción a la programación básica para controlar los movimientos y funciones del robot utilizando el IDE de Arduino.</li>
+                        <li><em>Integración de Sensores y Actuadores</em>: Conecta y programa sensores básicos como fotorresistencias y sensores ultrasónicos, así como un módulo Bluetooth para la comunicación inalámbrica.</li>
+                    </ul>`,
+                temas: `
+                    <ol>
+                        <li><em>Introducción a Arduino</em>: Conceptos básicos y primeros pasos con Arduino Uno.</li>
+                        <li><em>Introducción a Tinkercad</em>: Diseño y modelado de piezas en 3D.</li>
+                        <li><em>Diseño del Mini Robot</em>: Creación y personalización de las piezas del robot, incluyendo el diseño de soportes para servo motores y sensores.</li>
+                        <li><em>Impresión 3D</em>: Fabricación de las piezas del robot utilizando impresión 3D FFF.</li>
+                        <li><em>Ensamblaje del Mini Robot</em>: Montaje de las piezas y construcción del robot.</li>
+                        <li><em>Programación del Robot</em>: Implementación de movimientos y funciones básicas utilizando Arduino IDE.</li>
+                        <li><em>Integración de Sensores</em>: Conexión y programación de sensores como fotorresistencias y sensores ultrasónicos.</li>
+                        <li><em>Módulo Bluetooth</em>: Configuración y programación del módulo Bluetooth para comunicación inalámbrica.</li>
+                        <li><em>Simulación y Prototipado</em>: Pruebas y simulaciones para el prototipado del mini robot.</li>
+                    </ol>`,
+                duracion: `El taller está programado para durar 6 horas, tiempo durante el cual los participantes podrán diseñar, ensamblar y programar su propio mini robot.`,
+                publico: `Este taller está dirigido a estudiantes y profesionales interesados en la robótica, el diseño 3D, la Interacción Humano-Computadora y la Interacción Humano-Robot. El número máximo de participantes será de 20 personas, trabajando en equipos para facilitar el aprendizaje colaborativo.`,
+                requisitos: `
+                    <ul>
+                        <li><em>Proyector de Video</em>: Para las presentaciones y demostraciones.</li>
+                        <li><em>Computadora Personal</em>: Cada participante deberá traer su computadora para realizar las actividades de diseño y modelado en Tinkercad, así como la programación en Arduino.</li>
+                        <li><em>Acceso a Internet</em>: Para utilizar Tinkercad y descargar el software necesario.</li>
+                        <li><em>Opcional</em>: Impresora 3D para aquellos que deseen imprimir sus propios diseños en el taller.</li>
+                    </ul>`,
+                material: `El material necesario para la construcción del mini robot será proporcionado durante el taller. Al finalizar, los participantes podrán llevarse el mini robot que han ensamblado.`,
+                organizadores: `
+                    <p><strong>Dr. Mauricio E. Reyes Castillo</strong><br>
+                    Académico de la UNAM y del CIDI. Doctor en Ciencias de la Computación y Maestro en Diseño Industrial. Asesor externo del Grupo Golem del IIMAS UNAM.<br>
+                    <a href="mailto:mauricio.reyes@cidi.unam.mx">mauricio.reyes@cidi.unam.mx</a></p>
+                    
+                    <p><strong>Dr. Carlos Ricardo Cruz Mendoza</strong><br>
+                    Investigador por México en el IIMAS UNAM. Doctor en Ciencias de la Computación y Profesor de Interacción Humano-Robot. Miembro del Grupo Golem del IIMAS UNAM.<br>
+                    <a href="mailto:cricardo.cruz@iimas.unam.mx">cricardo.cruz@iimas.unam.mx</a></p>
+                    
+                    <p><strong>MDI. Julián Covarrubias Valdivia</strong><br>
+                    Académico administrativo en el Posgrado en Diseño Industrial (PDI UNAM). Maestro en Diseño Industrial e Ingeniero en Aeronáutica.<br>
+                    <a href="mailto:pdi_2@posgrado.unam.mx">pdi_2@posgrado.unam.mx</a></p>`,
+                informes: `Para mayor información escribir al correo <a href="mailto:carlosricardocm@gmail.com">carlosricardocm@gmail.com</a>`
+            },
+            en: {
+                descripcion: `As part of the Tenth Mexican International Conference on Human-Computer Interaction MexIHC 2024 (Saltillo, Coahuila, Mexico, November 6, 7, and 8), we invite you to participate in our innovative workshop titled <em>"Creating a Mini Robot with Tinkercad"</em>. This hands-on workshop is designed to provide participants with a comprehensive experience in designing, prototyping, and programming a mini robot using the Tinkercad tool.`,
+                objetivo: `
+                    <ul>
+                        <li><em>Tinkercad</em>: Get familiar with the basic functions and learn to design and model 3D parts.</li>
+                        <li><em>Robot Design</em>: Design the mini robot parts, including its structure and moving components such as servomotors and sensors.</li>
+                        <li><em>Robot Assembly</em>: Assemble the 3D designed parts using FFF (Fused Filament Fabrication) printing technique and build your own robot.</li>
+                        <li><em>Programming</em>: Introduction to basic programming to control the robot's movements and functions using the Arduino IDE.</li>
+                        <li><em>Integration of Sensors and Actuators</em>: Connect and program basic sensors such as photoresistors and ultrasonic sensors, as well as a Bluetooth module for wireless communication.</li>
+                    </ul>`,
+                temas: `
+                    <ol>
+                        <li><em>Introduction to Arduino</em>: Basic concepts and first steps with Arduino Uno.</li>
+                        <li><em>Introduction to Tinkercad</em>: Design and modeling of 3D parts.</li>
+                        <li><em>Mini Robot Design</em>: Creation and customization of robot parts, including the design of mounts for servomotors and sensors.</li>
+                        <li><em>3D Printing</em>: Manufacturing of robot parts using FFF 3D printing.</li>
+                        <li><em>Mini Robot Assembly</em>: Assembly of parts and construction of the robot.</li>
+                        <li><em>Robot Programming</em>: Implementation of basic movements and functions using Arduino IDE.</li>
+                        <li><em>Sensor Integration</em>: Connection and programming of sensors such as photoresistors and ultrasonic sensors.</li>
+                        <li><em>Bluetooth Module</em>: Configuration and programming of the Bluetooth module for wireless communication.</li>
+                        <li><em>Simulation and Prototyping</em>: Tests and simulations for mini robot prototyping.</li>
+                    </ol>`,
+                duracion: `The workshop is scheduled to last 6 hours, during which participants will be able to design, assemble, and program their own mini robot.`,
+                publico: `This workshop is aimed at students and professionals interested in robotics, 3D design, Human-Computer Interaction, and Human-Robot Interaction. The maximum number of participants will be 20 people, working in teams to facilitate collaborative learning.`,
+                requisitos: `
+                    <ul>
+                        <li><em>Video Projector</em>: For presentations and demonstrations.</li>
+                        <li><em>Personal Computer</em>: Each participant should bring their own computer for design and modeling activities in Tinkercad, as well as programming in Arduino.</li>
+                        <li><em>Internet Access</em>: To use Tinkercad and download the necessary software.</li>
+                        <li><em>Optional</em>: 3D printer for those who want to print their own designs in the workshop.</li>
+                    </ul>`,
+                material: `The material needed for the construction of the mini robot will be provided during the workshop. At the end, participants will be able to take home the mini robot they assembled.`,
+                organizadores: `
+                    <p><strong>Dr. Mauricio E. Reyes Castillo</strong><br>
+                    Academic at UNAM and CIDI. PhD in Computer Science and Master in Industrial Design. External advisor of the Golem Group of IIMAS UNAM.<br>
+                    <a href="mailto:mauricio.reyes@cidi.unam.mx">mauricio.reyes@cidi.unam.mx</a></p>
+                    
+                    <p><strong>Dr. Carlos Ricardo Cruz Mendoza</strong><br>
+                    Researcher at IIMAS UNAM. PhD in Computer Science and Teacher of Human-Robot Interaction at UNAM. Member of the Golem Group of IIMAS.<br>
+                    <a href="mailto:cricardo.cruz@iimas.unam.mx">cricardo.cruz@iimas.unam.mx</a></p>
+                    
+                    <p><strong>MDI. Julián Covarrubias Valdivia</strong><br>
+                    Administrative academic at the Graduate Program in Industrial Design (PDI UNAM). Master in Industrial Design and Aeronautical Engineer.<br>
+                    <a href="mailto:pdi_2@posgrado.unam.mx">pdi_2@posgrado.unam.mx</a></p>`,
+                informes: `For more info, write to the email <a href="mailto:carlosricardocm@gmail.com">carlosricardocm@gmail.com</a>`
+            }
+        };
+
+        function setLanguage(lang) {
+            document.getElementById('descripcion').innerHTML = `<h2>Descripción</h2><p>${content[lang].descripcion}</p>`;
+            document.getElementById('objetivo').innerHTML = `<h2>Objetivo del Taller</h2>${content[lang].objetivo}`;
+            document.getElementById('temas').innerHTML = `<h2>Contenido del Taller</h2>${content[lang].temas}`;
+            document.getElementById('duracion').innerHTML = `<h2>Duración del Taller</h2><p>${content[lang].duracion}</p>`;
+            document.getElementById('publico').innerHTML = `<h2>Público Objetivo</h2><p>${content[lang].publico}</p>`;
+            document.getElementById('requisitos').innerHTML = `<h2>Requisitos Especiales</h2>${content[lang].requisitos}`;
+            document.getElementById('material').innerHTML = `<h2>Material Proporcionado</h2><p>${content[lang].material}</p>`;
+            document.getElementById('organizadores').innerHTML = `<h2>Organizadores</h2>${content[lang].organizadores}`;
+            document.getElementById('informes').innerHTML = `<h2>Informes</h2>${content[lang].informes}`;
+        }
+
+        // Set default language to Spanish
+        setLanguage('es');
+    </script>
+</body>
+</html>
+
